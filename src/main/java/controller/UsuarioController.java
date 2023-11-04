@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.UsuarioDAO;
 import model.Usuario;
 
-@WebServlet( urlPatterns = {"/usuario", "/usuario-save", "/usuario-delete"})
+@WebServlet( urlPatterns = {"/html/usuario", "/usuario-save", "/usuario-delete"})
 public class UsuarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     UsuarioDAO uDao = new UsuarioDAO();
@@ -26,7 +26,7 @@ public class UsuarioController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String route = request.getServletPath();
 		switch(route) {
-		case "/usuario":
+		case "/html/usuario":
 			read(request, response);
 			break;
 		case "/usuario-save":
@@ -44,7 +44,7 @@ public class UsuarioController extends HttpServlet {
 	protected void read(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List <Usuario> usuarios = uDao.read();
 		request.setAttribute("usuarios", usuarios);
-		RequestDispatcher rd = request.getRequestDispatcher("./usuarios.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("./usuario.jsp");
 		rd.forward(request, response);
 	}
 	protected void save(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -58,12 +58,12 @@ public class UsuarioController extends HttpServlet {
 	usuario.setSenha(request.getParameter("senha"));
 	usuario.setLocalizacao(request.getParameter("localizacao"));
 	uDao.save(usuario);
-	response.sendRedirect("/usuario");
+	response.sendRedirect("/tde/html/usuario");
 	}
 	
 	protected void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		uDao.delete(id);
-		response.sendRedirect("./usuarios.jsp");
+		response.sendRedirect("/tde/html/usuario");
 	}
 }
