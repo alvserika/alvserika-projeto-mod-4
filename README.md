@@ -28,35 +28,53 @@ O "The Discoverer Experience" é um projeto ambicioso que combina a gestão de d
 
 
 ## Estrutura de Pastas
+Estrutura de Diretórios
 
-A estrutura de pastas do projeto está organizada da seguinte forma:
+A seguir está a estrutura de diretórios do projeto "The Discoverer Experience":
 
 projeto-mod-4/
 ├── src/
 │   ├── main/
 │   │   ├── java/
 │   │   │   ├── connection/
+│   │   │   │   └── Contém os arquivos relacionados à conexão com o banco de dados.
 │   │   │   ├── controller/
+│   │   │   │   └── Contém os controladores Java, incluindo arquivos como UsuarioController, PacotesController, ReservaController, e outros.
 │   │   │   ├── dao/
+│   │   │   │   └── Contém os objetos de acesso a dados (DAO) relacionados a entidades como Usuario, Pacotes, Reserva, entre outros.
 │   │   │   ├── model/
+│   │   │   │   └── Contém os modelos de dados, representando entidades como Usuario, Pacotes, Reserva, e outros.
 │   │   │   ├── ...
 │   │   ├── webapp/
 │   │   │   ├── html/
+│   │   │   │   └── Contém os arquivos HTML correspondentes a cada página do site, incluindo páginas para usuário, pacotes, reserva, entre outros.
 │   │   │   ├── styles/
+│   │   │   │   └── Contém arquivos CSS utilizados para estilizar o site.
 │   │   │   ├── js/
+│   │   │   │   └── Contém scripts JavaScript que aprimoram a funcionalidade do site.
 │   │   │   ├── assets/
+│   │   │   │   └── Armazena ativos, como imagens e GIFs, utilizados no site.
 │   │   │   ├── components/
+│   │   │   │   └── Contém componentes reutilizáveis usados em várias partes do site.
 │   │   │   ├── constants/
+│   │   │   │   └── Armazena dados constantes, como informações sobre destinos e botões.
 │   │   │   ├── ...
 ├── build/
 │   ├── classes/
 │   │   ├── connection/
+│   │   │   └── Contém arquivos compilados da classe de conexão com o banco de dados.
 │   │   ├── controller/
+│   │   │   └── Contém arquivos compilados dos controladores Java.
 │   │   ├── dao/
+│   │   │   └── Contém arquivos compilados dos objetos de acesso a dados (DAO).
 │   │   ├── model/
+│   │   │   └── Contém arquivos compilados dos modelos de dados.
 │   │   ├── ...
 ├── .gitignore
 ├── README.md
+
+Esta estrutura de diretórios organiza os diferentes componentes do projeto, desde o código-fonte Java até os arquivos HTML, CSS e JavaScript do site. Certifique-se de que essas pastas estejam organizadas de acordo com as necessidades do seu projeto.
+
 
 
 ## Pré-requisitos
