@@ -2,6 +2,8 @@
 
 Bem-vindo ao repositório do projeto "The Discoverer Experience". Este é um projeto desenvolvido como parte do curso Recode Pro, módulo 04, que abrange os seguintes aspectos:
 
+ ![The Discoverer Experience MVC](src/main/webapp/assets/tde-mvc.gif)
+
 # Menu de Navegação
 - [The Discoverer Experience](#the-discoverer-experience)
 - [Back-End](#back-end)
@@ -11,8 +13,6 @@ Bem-vindo ao repositório do projeto "The Discoverer Experience". Este é um pro
 - [Pré-requisitos](#pré-requisitos)
 - [Configuração](#configuração)
 - [Uso](#uso)
-
-  ![The Discoverer Experience MVC](src/main/webapp/assets/tde-mvc.gif)
 
 ## Back-End
 
