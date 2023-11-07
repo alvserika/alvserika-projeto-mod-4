@@ -19,7 +19,7 @@ import model.Pacotes;
 import model.Reserva;
 import model.Usuario;
 
-@WebServlet( urlPatterns = {"/reserva", "/reserva-save", "/reserva-delete"})
+@WebServlet( urlPatterns = {"/html/reserva", "/reserva-save", "/reserva-delete"})
 public class ReservaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	ReservaDAO rDao = new ReservaDAO();
@@ -43,7 +43,7 @@ public class ReservaController extends HttpServlet {
 		
 		String route = request.getServletPath();
 		switch(route) {
-		case "/reserva":
+		case "/html/reserva":
 			read(request, response);
 			break;
 		case "/reserva-save":
@@ -61,31 +61,31 @@ public class ReservaController extends HttpServlet {
 	protected void read(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List <Reserva> reservas = rDao.read();
 		request.setAttribute("reservas", reservas);
-		RequestDispatcher rd = request.getRequestDispatcher("./reservas.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("./reserva.jsp");
 		rd.forward(request, response);
 	}
 	protected void save(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Reserva reserva = new Reserva();
-		if(request.getParameter("id") != null) {
-			reserva.setIdReserva(Integer.parseInt(request.getParameter("id")));
+		if(request.getParameter("idReserva") != null) {
+			reserva.setIdReserva(Integer.parseInt(request.getParameter("idReserva")));
 		}
-		reserva.setDtCheckout(request.getParameter("checkout"));
-		reserva.setDtCheckIn(request.getParameter("checkin"));
-		reserva.setStatusReserva(Boolean.parseBoolean(request.getParameter("status")));
-		int idUsuario = Integer.parseInt(request.getParameter("usuario"));
-		int idPacote = Integer.parseInt(request.getParameter("pacote"));
-		int idDestino = Integer.parseInt(request.getParameter("destino"));
+		reserva.setDtCheckout(request.getParameter("dtCheckout"));
+		reserva.setDtCheckIn(request.getParameter("dtCheckin"));
+		reserva.setStatusReserva(Boolean.parseBoolean(request.getParameter("statusReserva")));
+		int idUsuario = Integer.parseInt(request.getParameter("idUsuario"));
+		int idPacote = Integer.parseInt(request.getParameter("idPacote"));
+		int idDestino = Integer.parseInt(request.getParameter("idDestino"));
 		
 		reserva.setUsuario(uDao.readById(idUsuario));
 		reserva.setPacotes(pDao.readById(idPacote));
 		reserva.setDestinos(dDao.readById(idDestino));
 		rDao.save(reserva);
-		response.sendRedirect("/reservas");
+		response.sendRedirect("/tde/html/reserva");
 	}
 	protected void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		rDao.delete(id);
-		response.sendRedirect("./reservas.jsp");
+		response.sendRedirect("/tde/html/reserva");
 	}
 
 }

@@ -13,7 +13,9 @@ import model.Reserva;
 import model.Usuario;
 
 public class ReservaDAO {
-
+	UsuarioDAO udao = new UsuarioDAO();
+	PacotesDAO pdao = new PacotesDAO();
+	DestinosDAO ddao = new DestinosDAO() ;
 	public void save(Reserva reserva) {
 		String sql;
 		sql = reserva.getIdReserva() == 0 ? 
@@ -63,7 +65,7 @@ public class ReservaDAO {
 	// read
 	public List<Reserva> read() {
 		List<Reserva> reservas = new ArrayList<Reserva>();
-		String sql = "select * from reserva_destino order by idReserva";
+		String sql = "select * from reserva";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -79,33 +81,18 @@ public class ReservaDAO {
 
 			while (rset.next()) {
 				Reserva reserva = new Reserva();
-				Destinos destino = new Destinos();
-				Pacotes pacote = new Pacotes();
-				Usuario usuario = new Usuario();
 
 				reserva.setIdReserva(rset.getInt("idReserva"));
 				reserva.setDtCheckout(rset.getString("dtCheckout"));
 				reserva.setStatusReserva(rset.getBoolean("statusReserva"));
 				reserva.setDtCheckIn(rset.getString("dtCheckIn"));
 
-				destino.setIdDestino(rset.getInt("idDestino"));
-				destino.setNomeDestino(rset.getString("nomeDestino"));
-				destino.setAvaliacao(rset.getInt("avaliacao"));
-
-				pacote.setIdPacote(rset.getInt("idPacote"));
-				pacote.setDescPacote(rset.getDouble("descPacote"));
-				pacote.setValorPacote(rset.getDouble("valorPacote"));
-
-				usuario.setIdUsuario(rset.getInt("idUsuario"));
-				usuario.setSenha(rset.getString("senha"));
-				usuario.setEmail(rset.getString("email"));
-				usuario.setCpf(rset.getString("cpf"));
-				usuario.setNome(rset.getString("nome"));
-				usuario.setLocalizacao(rset.getString("localização"));
-
-				reserva.setDestinos(destino);
-				reserva.setPacotes(pacote);
-				reserva.setUsuario(usuario);
+				int idDestino = rset.getInt("idDestino");
+				int idPacote = rset.getInt("idPacote");
+				int idUsuario = rset.getInt("idUsuario");
+				reserva.setDestinos(ddao.readById(idDestino));
+				reserva.setPacotes(pdao.readById(idPacote));
+				reserva.setUsuario(udao.readById(idUsuario));
 
 				reservas.add(reserva);
 			}

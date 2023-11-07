@@ -37,7 +37,7 @@ public class UsuarioController extends HttpServlet {
 			delete(request, response);
 			break;
 			default:
-			response.sendRedirect("/tde/html/index.html");
+				response.sendRedirect("/tde/html/index.html");
 			break;
 		}
 	}

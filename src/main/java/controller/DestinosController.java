@@ -14,7 +14,7 @@ import dao.DestinosDAO;
 import model.Destinos;
 
 
-@WebServlet( urlPatterns = {"/destinos", "/destinos-save", "/destinos-delete"})
+@WebServlet( urlPatterns = {"/html/destinos", "/destinos-save", "/destinos-delete"})
 public class DestinosController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	DestinosDAO dDao = new DestinosDAO();
@@ -27,7 +27,7 @@ public class DestinosController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String route = request.getServletPath();
 		switch(route) {
-		case "/destinos":
+		case "/html/destinos":
 			read(request, response);
 			break;
 		case "/destinos-save":
@@ -56,12 +56,12 @@ public class DestinosController extends HttpServlet {
 		destino.setNomeDestino(request.getParameter("nome"));
 		destino.setAvaliacao(Integer.parseInt(request.getParameter("avaliacao")));
 		dDao.save(destino);
-		response.sendRedirect("/destinos");
+		response.sendRedirect("/tde/html/destinos");
 	}
 	protected void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		dDao.delete(id);
-		response.sendRedirect("./destinos.jsp");
+		response.sendRedirect("/tde/html/destinos");
 	}
 
 }
