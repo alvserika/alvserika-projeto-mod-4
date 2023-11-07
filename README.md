@@ -28,8 +28,6 @@ Bem-vindo ao repositório do projeto "The Discoverer Experience". Este é um pro
 
 - **Padrão de Projeto MVC no Front-End:** A camada de apresentação no front-end também segue o padrão de projeto MVC. Isso significa que as telas de cadastro estão conectadas ao banco de dados através da lógica de controle (Controller) e a representação visual (View) foi projetada para melhorar a experiência do usuário.
 
-O "The Discoverer Experience" é um projeto ambicioso que combina a gestão de dados, o desenvolvimento de back-end e a criação de interfaces de usuário intuitivas para fornecer uma experiência de viagem única aos usuários. Este repositório contém todo o código e recursos necessários para executar o projeto e continuar seu desenvolvimento.
-
 ## Banco de Dados
 
 - **Ajustes no Modelo Lógico do Banco de Dados:** Foi realizado um refinamento do modelo lógico do banco de dados, incluindo a definição de tabelas, atributos e relacionamentos. Essas alterações foram feitas para atender às necessidades específicas do projeto.
