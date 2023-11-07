@@ -28,10 +28,7 @@ O "The Discoverer Experience" é um projeto ambicioso que combina a gestão de d
 
 
 ## Estrutura de Pastas
-Estrutura de Diretórios
-
-A seguir está a estrutura de diretórios do projeto "The Discoverer Experience":
-
+```
 projeto-mod-4/
 ├── src/
 │   ├── main/
@@ -72,10 +69,8 @@ projeto-mod-4/
 │   │   ├── ...
 ├── .gitignore
 ├── README.md
-
+```
 Esta estrutura de diretórios organiza os diferentes componentes do projeto, desde o código-fonte Java até os arquivos HTML, CSS e JavaScript do site. Certifique-se de que essas pastas estejam organizadas de acordo com as necessidades do seu projeto.
-
-
 
 ## Pré-requisitos
 
