@@ -12,6 +12,8 @@ Bem-vindo ao repositório do projeto "The Discoverer Experience". Este é um pro
 - [Configuração](#configuração)
 - [Uso](#uso)
 
+  ![The Discoverer Experience MVC](src/main/webapp/assets/tde-mvc.gif)
+
 ## Back-End
 
 - **Construção do Back-End em Java:** O back-end da aplicação foi desenvolvido utilizando tecnologias Java. Foram criadas estruturas de dados e classes para manipulação e gerenciamento das informações.
