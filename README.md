@@ -2,11 +2,6 @@
 
 Bem-vindo ao repositório do projeto "The Discoverer Experience". Este é um projeto desenvolvido como parte do curso Recode Pro, módulo 04, que abrange os seguintes aspectos:
 
-## Banco de Dados
-
-- **Ajustes no Modelo Lógico do Banco de Dados:** Foi realizado um refinamento do modelo lógico do banco de dados, incluindo a definição de tabelas, atributos e relacionamentos. Essas alterações foram feitas para atender às necessidades específicas do projeto.
-
-- **Implementação do Banco de Dados:** O banco de dados foi implementado utilizando o MySQL. Foram criadas as tabelas necessárias de forma manual para armazenar os dados relacionados aos destinos de viagem.
 
 ## Back-End
 
@@ -23,6 +18,13 @@ Bem-vindo ao repositório do projeto "The Discoverer Experience". Este é um pro
 - **Padrão de Projeto MVC no Front-End:** A camada de apresentação no front-end também segue o padrão de projeto MVC. Isso significa que as telas de cadastro estão conectadas ao banco de dados através da lógica de controle (Controller) e a representação visual (View) foi projetada para melhorar a experiência do usuário.
 
 O "The Discoverer Experience" é um projeto ambicioso que combina a gestão de dados, o desenvolvimento de back-end e a criação de interfaces de usuário intuitivas para fornecer uma experiência de viagem única aos usuários. Este repositório contém todo o código e recursos necessários para executar o projeto e continuar seu desenvolvimento.
+
+## Banco de Dados
+
+- **Ajustes no Modelo Lógico do Banco de Dados:** Foi realizado um refinamento do modelo lógico do banco de dados, incluindo a definição de tabelas, atributos e relacionamentos. Essas alterações foram feitas para atender às necessidades específicas do projeto.
+
+- **Implementação do Banco de Dados:** O banco de dados foi implementado utilizando o MySQL. Foram criadas as tabelas necessárias de forma manual para armazenar os dados relacionados aos destinos de viagem.
+
 
 
 ## Estrutura de Pastas
@@ -94,7 +96,23 @@ Agora, o projeto estará configurado localmente e poderá ser executado no servi
 
 ## Uso
 
-Depois de configurar o projeto e iniciar o servidor Tomcat, você pode acessar a aplicação a partir de um navegador da web. Normalmente, a aplicação pode ser acessada em [http://localhost:8080/projeto-mod-4](http://localhost:8080/projeto-mod-4).
+Depois de configurar o projeto e iniciar o servidor Tomcat, siga estas etapas para acessar a aplicação:
+
+1. Abra o Eclipse.
+
+2. No Eclipse, navegue até a pasta do projeto em sua estrutura de diretórios: `projeto-mod-4\src\main\webapp\html\`.
+
+3. Dentro desta pasta, localize o arquivo `index.html`.
+
+4. Clique com o botão direito no arquivo `index.html`.
+
+5. Selecione "Run as" no menu de contexto.
+
+6. Escolha "Run on Server".
+
+Certifique-se de que o servidor selecionado seja o Tomcat 9.
+
+Isso iniciará a aplicação e você poderá interagir com ela a partir do navegador.
 
 
 
