@@ -2,11 +2,13 @@
 
 Bem-vindo ao repositório do projeto "The Discoverer Experience". Este é um projeto desenvolvido como parte do curso Recode Pro, módulo 04, que abrange os seguintes aspectos:
 
-# Conteúdo
-
-- [Introdução](#introdução)
-- [Estrutura de Diretórios](#estrutura-de-diretórios)
-- [Pré-Requisitos](#pré-requisitos)
+# Menu de Navegação
+- [The Discoverer Experience](#the-discoverer-experience)
+- [Back-End](#back-end)
+- [Front-End](#front-end)
+- [Banco de Dados](#banco-de-dados)
+- [Estrutura de Pastas](#estrutura-de-pastas)
+- [Pré-requisitos](#pré-requisitos)
 - [Configuração](#configuração)
 - [Uso](#uso)
 
