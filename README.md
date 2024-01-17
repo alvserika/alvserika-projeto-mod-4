@@ -119,7 +119,7 @@ Agora, o projeto estará configurado localmente e poderá ser executado no servi
 
 ## Nota do projeto
 
-![nota]()
+![nota](https://raw.githubusercontent.com/alvserika/projeto-mod-4/main/src/main/webapp/assets/nota-modulo-4.png)
 
 
 ## Uso
