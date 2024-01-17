@@ -12,6 +12,7 @@ Bem-vindo ao repositório do projeto "The Discoverer Experience". Este é um pro
 - [Estrutura de Pastas](#estrutura-de-pastas)
 - [Pré-requisitos](#pré-requisitos)
 - [Configuração](#configuração)
+- [Nota do Projeto](#nota-do-projeto)
 - [Uso](#uso)
 
 ## Back-End
@@ -115,6 +116,11 @@ Certifique-se de instalar e configurar essas ferramentas antes de prosseguir com
    - Inicie o servidor a partir desta aba.
 
 Agora, o projeto estará configurado localmente e poderá ser executado no servidor Tomcat.
+
+## Nota do projeto
+
+![nota]()
+
 
 ## Uso
 
